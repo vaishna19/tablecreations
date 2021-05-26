@@ -56,39 +56,6 @@ const User1 = db.define('User1',
   // Other model options go here
   });
 console.log(User1 === sequelize.models.User1); // true
-db.sync({
-    force: true
-}).then(() => {
-  const vaishu = User.Create([
-    {
-      firstName: "vaishu",
-      lastName: "jasper",
-      employeeId: "356",
-      employeePlace: "Udumalpet",
-      employeeQualification: "B.Tech",
-
-    },
-    ]
-  )
-  })
-  .catch((err) => console.log(err))
-
-  db.sync({
-    force: true
-}).then(() => {
-  const jasper = User1.Create([
-    {
-      firstName: "jasper",
-      section: "C",
-      address: "no 7",
-      Place: "Udumalpet",
-
-    },
-    ]
-  )
-  })
-  .catch((err) => console.log(err))
-
 // db.authenticate()
 //   .then(() => {
 //     console.log('connection success')
