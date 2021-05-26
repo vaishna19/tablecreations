@@ -6,43 +6,43 @@ const db = new Sequelize('employee', 'root', 'vaishveer19', {
 });
 const User = db.define('User',
  {
-  // Model attributes are defined here
   firstName: {
     type: DataTypes.STRING,
     allowNull: false
   },
   lastName: {
     type: DataTypes.STRING
-    // allowNull defaults to true
     },
   employeeId: {
     type: DataTypes.INTEGER            
-    // allowNull defaults to true
     },
   employeePlace: {
     type: DataTypes.STRING            
-    // allowNull defaults to true
     },
   employeeQualification: {
     type: DataTypes.STRING            
-    // allowNull defaults to true
   }
 },
   {
-  // Other model options go here
   });
- //console.log(User === sequelize.models.User); // true 
 const User1 = db.define('User1',
- {
-  // Model attributes are defined here
-  firstName: {
-    type: DataTypes.STRING,
-    allowNull: false
-  }
-},
   {
-  // Other model options go here
-  });
+    firstName: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    school: {
+    type: DataTypes.STRING
+    },
+  address: {
+    type: DataTypes.INTEGER            
+    },
+  place: {
+    type: DataTypes.STRING            
+    },
+  },
+
+  );
 
 module.exports - {
   db
