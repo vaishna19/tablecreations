@@ -43,10 +43,13 @@ const User1 = db.define('User1',
   },
 
   );
+User.hasOne(User, {
+    foreignKey: "firstName"
+});
+User1.belongsTo(User1);
 
-module.exports - {
-  db
-}
+db.sync()
+
 
 
 
